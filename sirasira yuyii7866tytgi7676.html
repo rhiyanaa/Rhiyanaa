@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sira-Sira Store - Sales Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(prutas.webp);
+      
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #af4c4c27;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+    .table th, .table td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+      color: white;
+    }
+    .table th {
+      background-color: #af4c4c34;
+      color: white;
+    }
+    .btn {
+      background-color: #af4c4c38;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    p{
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 style="color: white;">Rhiyana's Store</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price per Piece</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apple</td>
+          <td>30 pcs</td>
+          <td>₱25</td>
+          <td>₱750</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>20 pcs</td>
+          <td>₱20</td>
+          <td>₱400</td>
+        </tr>
+        <tr>
+          <td>Melon</td>
+          <td>50 pcs</td>
+          <td>₱15</td>
+          <td>₱750</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="result">
+      <p><strong>Total Payables: </strong>₱1,900</p>
+      <p><strong>Cash Tendered: </strong>₱2,500</p>
+      <p><strong>Change: </strong>975</p>
+    </div> 
+
+    <button class="btn" onclick="calculate()">Calculate</button>
+  </div>
+
+  <script>
+    function calculate() {
+      // Item prices and quantities
+      const applePrice = 25;
+      const orangePrice = 20;
+      const melonPrice = 15;
+
+      const appleQuantity = 25;
+      const orangeQuantity = 15;
+      const melonQuantity = 40;
+
+      // Total calculations
+      const appleTotal = applePrice * appleQuantity;
+      const orangeTotal = orangePrice * orangeQuantity;
+      const melonTotal = melonPrice * melonQuantity;
+
+      const totalPayables = appleTotal + orangeTotal + melonTotal;
+      const cashTendered = 2500;
+      const change = cashTendered - totalPayables;
+
+      // Display results
+      document.querySelector('.result').innerHTML = `
+        <p><strong>Total Payables: </strong>₱${totalPayables}</p>
+        <p><strong>Cash Tendered: </strong>₱${cashTendered}</p>
+        <p><strong>Change: </strong>₱${change}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

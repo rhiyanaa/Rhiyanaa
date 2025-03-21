@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhian Tomale - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="port.css">
+    <style>
+        .skills-section h2 {
+            text-align: center;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+        .skill-card {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section" data-aos="fade-up">
+        <div class="intro">
+            <h1>Rhian Tomale Portfolio</h1>
+            <p>Welcome to my personal portfolio. Explore my skills!</p>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section" data-aos="fade-right">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="yan.jpg" alt="Rhian Tomale" class="about-image" data-aos="zoom-in">
+            <p>Hi, I'm Rhian P. Tomale, a passionate developer with experience in web development and design. I love creating beautiful and functional websites.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section" data-aos="fade-up">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-aos="zoom-in">
+                <img src="any.webp" alt="JavaScript" width="70">
+                <h3>JavaScript</h3>
+                <p>Knowledge in DOM manipulation and API integration.</p>
+            </div>
+            
+            <div class="skill-card" data-aos="zoom-in">
+                <img src="yaaa.webp" alt="HTML" width="70">
+                <h3>HTML</h3>
+                <p>Understanding of semantic HTML and accessibility.</p>
+            </div>
+            
+            <div class="skill-card" data-aos="zoom-in">
+                <img src="reggg.webp" alt="CSS" width="70">
+                <h3>CSS</h3>
+                <p>Experience with Flexbox, Grid, and responsive design.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out for any inquiries or collaborations!</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rhian Tomale. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

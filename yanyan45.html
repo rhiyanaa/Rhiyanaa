@@ -1,0 +1,46 @@
+import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Card, CardContent } from "@/components/ui/card";
+
+const projects = [
+  { title: "Project One", description: "Description of project one.", link: "#" },
+  { title: "Project Two", description: "Description of project two.", link: "#" },
+];
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6 text-center">
+      <header className="text-3xl font-bold text-gray-800">My Portfolio</header>
+      <p className="mt-2 text-gray-600">Welcome to my personal portfolio website!</p>
+      
+      <section className="mt-8">
+        <h2 className="text-2xl font-semibold">About Me</h2>
+        <p className="mt-2 text-gray-700">I'm a passionate developer specializing in web and software development.</p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-2xl font-semibold">Projects</h2>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {projects.map((project, index) => (
+            <Card key={index} className="p-4">
+              <CardContent>
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-gray-600">{project.description}</p>
+                <a href={project.link} className="text-blue-500 mt-2 inline-block">View Project</a>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-2xl font-semibold">Contact</h2>
+        <div className="mt-2 flex justify-center gap-4">
+          <a href="#" className="text-gray-700 text-2xl"><FaGithub /></a>
+          <a href="#" className="text-blue-500 text-2xl"><FaLinkedin /></a>
+          <a href="#" className="text-red-500 text-2xl"><FaEnvelope /></a>
+        </div>
+      </section>
+    </div>
+  );
+}
